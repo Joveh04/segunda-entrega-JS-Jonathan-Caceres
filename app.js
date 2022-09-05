@@ -1,12 +1,8 @@
-/*variables*/
+
 let Usuario = "Jonathan";
 let Contraseña = "Caceres";
 let impuestos = 30;
 let porcentaje = 100
-let Jornales = valorHora * HorasTrabajadas;
-let horaExtra = valorHora * 2;
-let horasExtras = HorasExtrasTrabajadas * horaExtra;
-let totalJornalNominales = horasExtras + Jornales;
 
 
 let SolicitudDeUsuario = prompt("ingrese su nombre de usuario");
@@ -19,11 +15,16 @@ if(SolicitudDeUsuario== "Jonathan" && SolicitudContraseña == "Caceres"){
 }
 
 let valorHora = Number(prompt("ingrese el valor de la hora nominal"))
-let HorasTrabajadas = Number(prompt("ingrese la cantidad de horas trabajadas"));
 
+let HorasTrabajadas = Number(prompt("ingrese la cantidad de horas trabajadas"));
+let Jornales = valorHora * HorasTrabajadas;
 console.log(`el valor de las horas trabajadas es de $${Jornales} `);
 
+
 let HorasExtrasTrabajadas= Number(prompt("ingrese la cantidad de horas extras trabajadasa"));
+let horaExtra = valorHora * 2;
+let horasExtras = HorasExtrasTrabajadas;
+let totalJornalNominales = horasExtras + Jornales
 
 console.log(`El total de horas extras generadas en el mes es de ${horaExtra} * ${HorasExtrasTrabajadas} = ${horasExtras}`)
 
