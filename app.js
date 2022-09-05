@@ -25,20 +25,33 @@ console.log(`El total de horas extras generadas en el mes es de ${horaExtra} * $
  console.log(` el total Nominal a combrar es de ${Jornales}+ ${horasExtras} = ${totalJornalNominales}`);
 
  let impuestos = 30;
-let impuestosCalculados = totalJornalNominales * impuestos / 100;
-
-console.log(` el total de impuestos es del 30% lo cual resulta el monto de ${impuestosCalculados}`);
-
-function calcularLiquido(totalJornalNominales,impuestosCalculados){
- return totalJornalNominales - impuestosCalculados;
+/*let impuestosCalculados = totalJornalNominales * impuestos / 100;*/
+let porcentaje = 100
+function calculadoraImpuestos(totalJornalNominales,impuestos,porcentaje){
+    return totalJornalNominales * impuestos / porcentaje;
 }
 
-let resultadoLiquido = calcularLiquido(totalJornalNominales,impuestosCalculados);
+let resultadoImpuesto = calculadoraImpuestos(totalJornalNominales,impuestos,porcentaje);
+console.log(`total impuestos calculados: ${resultadoImpuesto}`);
+
+
+console.log(` el total de impuestos es del 30% lo cual resulta el monto de ${resultadoImpuesto}`);
+
+function calcularLiquido(totalJornalNominales,resultadoImpuesto){
+ return totalJornalNominales - resultadoImpuesto;
+}
+
+let resultadoLiquido = calcularLiquido(totalJornalNominales,resultadoImpuesto);
 console.log(`el total liquido a cobrar es de $${resultadoLiquido}`);
 
 
 
 
 
+/*function calculadoraImpuestos(totalJornalNominales,impuestos,porcentaje){
+    return totalJornalNominales * impuestos / porcentaje;
+}
 
+let resultadoImpuesto = calculadoraImpuestos(totalJornalNominales,impuestos,porcentaje);
+console.log(`total impuestos calculados: ${resultadoImpuesto}`);*/
 
