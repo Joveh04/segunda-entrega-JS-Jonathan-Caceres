@@ -11,7 +11,7 @@ let totalJornalNominales = horasExtras + Jornales;
 
 let SolicitudDeUsuario = prompt("ingrese su nombre de usuario");
 let SolicitudContraseña= prompt ("ingrese su contraseña") ;
-if(SolicitudDeUsuario== "jefe" && SolicitudContraseña == 1234){
+if(SolicitudDeUsuario== "Jonathan" && SolicitudContraseña == "Caceres"){
     alert("bienvenido al calculador de sueldo liquido jornal liquido");
 
 }else{
