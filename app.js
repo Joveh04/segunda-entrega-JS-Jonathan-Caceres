@@ -23,7 +23,7 @@ console.log(`el valor de las horas trabajadas es de $${Jornales} `);
 
 let HorasExtrasTrabajadas= Number(prompt("ingrese la cantidad de horas extras trabajadasa"));
 let horaExtra = valorHora * 2;
-let horasExtras = HorasExtrasTrabajadas;
+let horasExtras = HorasExtrasTrabajadas * horaExtra;
 let totalJornalNominales = horasExtras + Jornales
 
 console.log(`El total de horas extras generadas en el mes es de ${horaExtra} * ${HorasExtrasTrabajadas} = $${horasExtras}`)
