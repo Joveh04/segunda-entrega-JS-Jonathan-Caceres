@@ -26,19 +26,19 @@ let horaExtra = valorHora * 2;
 let horasExtras = HorasExtrasTrabajadas;
 let totalJornalNominales = horasExtras + Jornales
 
-console.log(`El total de horas extras generadas en el mes es de ${horaExtra} * ${HorasExtrasTrabajadas} = ${horasExtras}`)
+console.log(`El total de horas extras generadas en el mes es de ${horaExtra} * ${HorasExtrasTrabajadas} = $${horasExtras}`)
 
-console.log(` el total Nominal a combrar es de ${Jornales}+ ${horasExtras} = ${totalJornalNominales}`);
+console.log(` el total Nominal a combrar es de $${Jornales}+ $${horasExtras} = $${totalJornalNominales}`);
 
 function calculadoraImpuestos(totalJornalNominales,impuestos,porcentaje){
     return totalJornalNominales * impuestos / porcentaje;
 }
 
 let resultadoImpuesto = calculadoraImpuestos(totalJornalNominales,impuestos,porcentaje);
-console.log(`total impuestos calculados: ${resultadoImpuesto}`);
+console.log(`total impuestos calculados: $${resultadoImpuesto}`);
 
 
-console.log(` el total de impuestos es del 30% lo cual resulta el monto de ${resultadoImpuesto}`);
+console.log(` el total de impuestos es del 30% lo cual resulta el monto de $${resultadoImpuesto}`);
 
 function calcularLiquido(totalJornalNominales,resultadoImpuesto){
  return totalJornalNominales - resultadoImpuesto;
