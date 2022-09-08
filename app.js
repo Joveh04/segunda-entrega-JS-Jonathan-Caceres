@@ -7,11 +7,14 @@ let porcentaje = 100
 
 let SolicitudDeUsuario = prompt("ingrese su nombre de usuario");
 let SolicitudContraseña= prompt ("ingrese su contraseña") ;
+
+function inicioDeSesion(){
 if(SolicitudDeUsuario== "Jonathan" && SolicitudContraseña == "Caceres"){
     alert("bienvenido al calculador de sueldo liquido jornal liquido");
 
 }else{
     alert("usuario incorrecto");
+}
 }
 
 let valorHora = Number(prompt("ingrese el valor de la hora nominal"))
