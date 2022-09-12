@@ -4,9 +4,8 @@ let Contraseña = "Caceres";
 let impuestos = 30;
 let porcentaje = 100
 
-
 let SolicitudDeUsuario = prompt("ingrese su nombre de usuario");
-let SolicitudContraseña= prompt ("ingrese su contraseña") ;
+let SolicitudContraseña= prompt ("ingrese su contraseña");
 
 function inicioDeSesion(){
     if(SolicitudDeUsuario== "Jonathan" && SolicitudContraseña == "Caceres"){
@@ -16,6 +15,9 @@ function inicioDeSesion(){
     alert("usuario incorrecto");
     }
 }
+
+inicioDeSesion();
+
 
 let valorHora = Number(prompt("ingrese el valor de la hora nominal"))
 
@@ -50,6 +52,25 @@ function calcularLiquido(totalJornalNominales,resultadoImpuesto){
 let resultadoLiquido = calcularLiquido(totalJornalNominales,resultadoImpuesto);
 console.log(`el total liquido a cobrar es de $${resultadoLiquido}`);
 
+let datoNombre = prompt("para guardar el detalle ingrese su nombre");
+let datoEmail = prompt("ingrese su email");
+
+
+const reciboDetalle = {
+    nombre: datoNombre,
+    email: datoEmail,
+    sueldoNominal:totalJornalNominales,
+    descuentos : resultadoImpuesto,
+    sueldoACobrar: resultadoLiquido,
+
+}
 
 
 
+const calculosRealizados = [];
+
+calculosRealizados.push(reciboDetalle);
+
+console.log(calculosRealizados);
+
+alert(prompt("gracias por utilizar la app"));
