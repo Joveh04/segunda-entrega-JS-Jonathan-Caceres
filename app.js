@@ -62,9 +62,7 @@ const reciboDetalle = {
     sueldoNominal:totalJornalNominales,
     descuentos : resultadoImpuesto,
     sueldoACobrar: resultadoLiquido,
-
 }
-
 
 
 const calculosRealizados = [];
@@ -73,4 +71,18 @@ calculosRealizados.push(reciboDetalle);
 
 console.log(calculosRealizados);
 
-alert(prompt("gracias por utilizar la app"));
+
+let historial = prompt("desea borrar el historial?");
+
+    if(historial== "si"){
+    calculosRealizados.pop();
+    alert("el historial se borro correctamente")
+
+    }else{
+    alert("el historial no a sido borrado");
+
+    }
+
+
+console.log(calculosRealizados);
+
